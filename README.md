@@ -6,7 +6,7 @@ Ziel ist es, Pollendaten über eine REST-API abzurufen, statistisch auszuwerten 
 
 ## Voraussetzungen
 
-- Python 3.15
+- Python 3.13
 - Git
 - VS Code oder eine andere Python-IDE
 
@@ -26,7 +26,7 @@ Jeder Entwickler erstellt eine eigene virtuelle Python-Umgebung.
 **Windows (PowerShell):**
 
 ```powershell
-py -3.15 -m venv .venv
+py -3.13 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
