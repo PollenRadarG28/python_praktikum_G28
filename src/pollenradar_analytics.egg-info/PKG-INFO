@@ -1,5 +1,0 @@
-Metadata-Version: 2.4
-Name: pollenradar-analytics
-Version: 0.1.0
-Summary: Python Data Science project for pollen data analysis and visualization
-Requires-Python: <3.16,>=3.15
