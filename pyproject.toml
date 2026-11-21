@@ -1,19 +1,33 @@
-[build-system]
-requires = ["setuptools>=68"]
-build-backend = "setuptools.build_meta"
 
 [project]
-name = "pollenradar"
+name = "pollenradar-analytics"
 version = "0.1.0"
-description = "Pollen-Daten laden, analysieren und visualisieren"
-requires-python = ">=3.10"
-dependencies = ["pandas>=2.0", "matplotlib>=3.7", "requests>=2.31"]
+description = "Python Data Science project for pollen data analysis and visualization"
+requires-python = ">=3.15,<3.16"
 
-[project.scripts]
-pollenradar = "pollenradar.app:main"
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
+
+[tool.ruff]
+target-version = "py313"
+src = ["src"]
+
+[tool.ruff.lint]
+select = [
+    "E4",   # Import- und Syntaxprobleme
+    "E7",   # Unnötige Anweisungen und Formatierungsprobleme
+    "E9",   # Schwerwiegende Syntaxfehler
+    "F",    # Pyflakes: ungenutzte Variablen, Imports usw.
+    "I",    # Imports sortieren
+]
+
 [tool.pytest.ini_options]
-pythonpath = ["src"]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-ra"

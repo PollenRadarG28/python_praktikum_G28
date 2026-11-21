@@ -1,9 +1,25 @@
-__pycache__/
-*.py[cod]
-.pytest_cache/
+
+# Virtuelle Python-Umgebung
 .venv/
 venv/
-build/
-dist/
-*.egg-info/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+
+# Lokale Konfiguration
+.env
+.env.*
+!.env.example
+
+# Test- und Tool-Caches
+.pytest_cache/
+.ruff_cache/
+
+# IDE
 .idea/
+.vscode/
+
+# Betriebssystem
+.DS_Store
+Thumbs.db
